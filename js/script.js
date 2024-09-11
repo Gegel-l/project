@@ -10,7 +10,9 @@ const personalMovieDB = {
   privat: false
 };
 
-for (let i = 0; i < 2; i++) {
+let questions = 0;
+
+while (questions < 2) {
   const question_1 = prompt('Один из последних просмотренных фильмов?'),
         question_2 = prompt('На сколько оцените его?');
 
@@ -21,6 +23,7 @@ for (let i = 0; i < 2; i++) {
     console.log('Error!');
     i--;
   }
+  questions++;
 }
 
 if (personalMovieDB.count < 10) {
